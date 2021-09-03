@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from 'react';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import * as ROUTES from './constants/routes';
+import ScrollToTop from './components/ScrollToTop';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const AboutMe = lazy(() => import('./pages/AboutMe'));
+const ArtGallery = lazy(() => import('./pages/ArtGallery'));
+const WebApps = lazy(() => import('./pages/WebApps'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+
+export default function App() {
+    return (
+        <Router>
+            <Suspense fallback={<p>Loading...</p>}>
+                <ScrollToTop />
+                <Switch>
+                    <Route path={ROUTES.ABOUT_ME} component={AboutMe} exact />
+                    <Route path={ROUTES.ART_GALLERY} component={ArtGallery} />
+                    <Route path={ROUTES.WEB_APPS} component={WebApps} />
+                    <Route component={NotFound} />
+                </Switch>
+            </Suspense>
+        </Router>
+    );
 }
-
-export default App;
