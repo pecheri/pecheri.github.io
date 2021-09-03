@@ -77,7 +77,7 @@ export default function Header() {
                 }}
                 className="fixed flex sm:hidden top-4 right-4 z-99"
             >
-                <svg
+                {/* <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className={`h-10 w-10 transform duration-300 opacity-80 ${
                         isMenuOpen ? 'text-yellow-primary' : 'text-black-primary'
@@ -87,7 +87,12 @@ export default function Header() {
                     stroke="currentColor"
                 >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                </svg> */}
+                <i
+                    className={`fas fa-bolt h-10 w-10 text-4xl transform duration-300 opacity-80 ${
+                        isMenuOpen ? 'text-yellow-primary' : 'text-gray-primary'
+                    }`}
+                />
             </button>
             <div
                 onClick={closeMenu}

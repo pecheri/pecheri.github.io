@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
 import logo from '../images/logo.png';
 
@@ -29,10 +29,10 @@ export default function AboutMe() {
                 </div>
             </div>
             <div className="flex justify-end relative">
-                <div className="mt-60 mb-0 sm:mb-60 relative h-screen overflow-x-hidden" style={{ width: '80%' }}>
+                <div className="mt-60 mb-0 sm:mb-60 relative h-screen overflow-x-hidden w-11/12 sm:w-4/5">
                     <div
-                        className="absolute bg-gray-primary rounded-full top-0 -right-20"
-                        style={{ width: '100%', paddingTop: '100%' }}
+                        className="absolute bg-gray-primary rounded-full top-0 -right-20 w-full"
+                        style={{ paddingTop: '100%' }}
                     >
                         <div className="absolute top-1/3 -left-20 w-1/2">
                             <img src={logo} alt="logo" />
@@ -53,19 +53,21 @@ export default function AboutMe() {
             </div>
             <div id="" className="pt-0 h-screen relative w-screen">
                 <div className="sticky top-20 bg-red-primary w-8/12 md:w-5/12 h-32 flex items-center justify-end z-30 rounded-r-sm">
-                    <p className="text-gray-primary text-base sm:text-xl font-bold pr-4">Feel Free to Contact Me</p>
+                    <p className="text-gray-primary text-base sm:text-xl font-bold pr-2 sm:pr-4">
+                        Feel Free to Contact Me
+                    </p>
                 </div>
                 <div
                     id="contact"
-                    className="sticky bg-blue-primary left-full top-40 w-9/12 z-10 py-16 pl-12 text-base sm:text-lg text-gray-primary rounded-l-sm"
+                    className="sticky bg-blue-primary left-full top-40 w-9/12 z-10 py-16 pl-2 sm:pl-12 text-base sm:text-lg text-gray-primary rounded-l-sm"
                 >
                     <h2>Ryo Kagaya Inciong</h2>
                     <ul className="pt-3 text-sm sm:text-base">
-                        <li className="pb-1 ml-8">
+                        <li className="pb-1 ml-4 sm:ml-8">
                             <a href="tel:1-818-524-8631">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5 inline-block mr-2"
+                                    className="h-4 w-4 sm:h-5 sm:w-5 inline-block mr-1 sm:mr-2"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -80,11 +82,11 @@ export default function AboutMe() {
                                 1-818-524-8631
                             </a>
                         </li>
-                        <li className="pb-1 ml-16">
+                        <li className="pb-1 ml-8 sm:ml-16">
                             <a href="mailto:ryo.sr400@gmail.com">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5 inline-block mr-2"
+                                    className="h-4 w-4 sm:h-5 sm:w-5 inline-block mr-1 sm:mr-2"
                                     fill="none"
                                     viewBox="0 0 24 24"
                                     stroke="currentColor"
@@ -99,12 +101,12 @@ export default function AboutMe() {
                                 ryo.sr400@gmail.com
                             </a>
                         </li>
-                        <li className="text-sm sm:text-base pb-1 ml-24">
+                        <li className="text-sm sm:text-base pb-1 ml-12 sm:ml-24">
                             <a href="https://twitter.com/peche29812486" target="_blank" rel="noreferrer">
                                 Twitter
                             </a>
                         </li>
-                        <li className="text-sm sm:text-base ml-32">
+                        <li className="text-sm sm:text-base ml-16 sm:ml-32">
                             <a href="https://www.instagram.com/pecherk_art/" target="_blank" rel="noreferrer">
                                 Instagram
                             </a>

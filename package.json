@@ -1,7 +1,6 @@
 {
   "name": "ryo-kagaya-inciong",
   "homepage": "http://pecheri.github.io/ryo-kagaya-inciong",
-
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +12,7 @@
     "@types/node": "^16.7.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^17.0.2",
@@ -25,7 +25,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "predeploy": "craco build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "craco test",
     "eject": "react-scripts eject"
