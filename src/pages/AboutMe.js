@@ -63,7 +63,7 @@ export default function AboutMe() {
                 >
                     <h2>Ryo Kagaya Inciong</h2>
                     <ul className="pt-3 text-sm sm:text-base">
-                        <li className="pb-1 ml-4 sm:ml-8">
+                        <li className="pb-1 ml-4 sm:ml-8 hover:text-yellow-primary">
                             <a href="tel:1-818-524-8631">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ export default function AboutMe() {
                                 1-818-524-8631
                             </a>
                         </li>
-                        <li className="pb-1 ml-8 sm:ml-16">
+                        <li className="pb-1 ml-8 sm:ml-16 hover:text-yellow-primary">
                             <a href="mailto:ryo.sr400@gmail.com">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -101,14 +101,19 @@ export default function AboutMe() {
                                 ryo.sr400@gmail.com
                             </a>
                         </li>
-                        <li className="text-sm sm:text-base pb-1 ml-12 sm:ml-24">
+                        <li className="text-sm sm:text-base pb-1 ml-12 sm:ml-24 hover:text-yellow-primary">
                             <a href="https://twitter.com/peche29812486" target="_blank" rel="noreferrer">
                                 Twitter
                             </a>
                         </li>
-                        <li className="text-sm sm:text-base ml-16 sm:ml-32">
+                        <li className="text-sm sm:text-base pb-1 ml-16 sm:ml-32 hover:text-yellow-primary">
                             <a href="https://www.instagram.com/pecherk_art/" target="_blank" rel="noreferrer">
                                 Instagram
+                            </a>
+                        </li>
+                        <li className="text-sm sm:text-base ml-20 sm:ml-40 hover:text-yellow-primary">
+                            <a href="https://www.linkedin.com/in/ryo-inciong/" target="_blank" rel="noreferrer">
+                                LinkedIn
                             </a>
                         </li>
                     </ul>

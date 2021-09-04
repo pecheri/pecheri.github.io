@@ -20,6 +20,7 @@ module.exports = {
                 monoton: ['Monoton', 'cursive'],
                 urbanist: ['Urbanist', 'sans-serif'],
                 montserrat: ['Montserrat', 'sans-serif'],
+                pressstart: ['"Press Start 2P"', 'cursive'],
             },
             colors: {
                 yellow: {

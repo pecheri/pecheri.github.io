@@ -2,6 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import * as ROUTES from './constants/routes';
 import ScrollToTop from './components/ScrollToTop';
+import Loading from './components/Loading';
 
 const AboutMe = lazy(() => import('./pages/AboutMe'));
 const ArtGallery = lazy(() => import('./pages/ArtGallery'));
@@ -11,7 +12,7 @@ const NotFound = lazy(() => import('./pages/NotFound'));
 export default function App() {
     return (
         <Router>
-            <Suspense fallback={<p>Loading...</p>}>
+            <Suspense fallback={<Loading />}>
                 <ScrollToTop />
                 <Switch>
                     <Route path={ROUTES.ABOUT_ME} component={AboutMe} exact />
