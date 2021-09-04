@@ -1,2 +1,0 @@
-(this["webpackJsonpryo-kagaya-inciong"]=this["webpackJsonpryo-kagaya-inciong"]||[]).push([[6],{33:function(n,i,t){"use strict";t.r(i),t.d(i,"default",(function(){return a}));t(0);var o=t(3);function a(){return Object(o.jsx)("div",{children:"Not Found"})}}}]);
-//# sourceMappingURL=6.2ca7b8e9.chunk.js.map
