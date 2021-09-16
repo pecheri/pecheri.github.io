@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import CookieConsent, { getCookieConsentValue } from 'react-cookie-consent';
+import { initGA } from '../util';
 import Header from '../components/Header';
 import logo from '../images/logo.png';
 
@@ -7,12 +9,29 @@ export default function AboutMe() {
         document.title = 'Ryo K Inciong';
     }, []);
 
+    useEffect(() => {
+        const isConsent = getCookieConsentValue();
+        if (isConsent === 'true') {
+            handleAcceptCookie();
+        }
+    }, []);
+
     let day = new Date();
     let year = day.getFullYear();
 
+    const handleAcceptCookie = () => {
+        if (process.env.REACT_APP_GOOGLE_ANALYTICS_ID) {
+            initGA(process.env.REACT_APP_GOOGLE_ANALYTICS_ID);
+        }
+    };
+
     return (
         <div className="font-montserrat relative w-screen">
+            <CookieConsent onAccept={handleAcceptCookie}>
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
             <Header />
+
             <div className="bg-blue-primary absolute top-0 w-1/4 h-screen z-50 flex">
                 <p className="font-monoton text-gray-primary text-6xl sm:text-8xl transform -rotate-90 origin-bottom-left absolute left-full bottom-0 pl-4">
                     Welcome
